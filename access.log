@@ -1,0 +1,17 @@
+Example app listening on port 3000!
+::1 - - [28/Mar/2017:20:50:53 -0400] "GET /mike.pac HTTP/1.1" 200 2329 "-" "curl/7.43.0"
+::1 - - [28/Mar/2017:20:50:59 -0400] "GET /mikeconrad.pac HTTP/1.1" 200 2329 "-" "curl/7.43.0"
+::1 - - [28/Mar/2017:20:51:06 -0400] "GET /jordansantos.pac HTTP/1.1" 200 2329 "-" "curl/7.43.0"
+Example app listening on port 3000!
+::1 - - [28/Mar/2017:20:51:55 -0400] "GET /randompac.pac HTTP/1.1" 200 2329 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.98 Safari/537.36"
+::1 - - [28/Mar/2017:20:51:55 -0400] "GET /randompac.pac HTTP/1.1" 200 2329 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.98 Safari/537.36"
+::1 - - [28/Mar/2017:20:51:59 -0400] "GET /randompac.pac HTTP/1.1" 200 2329 "-" "networkd (unknown version) CFNetwork/760.6.3 Darwin/15.6.0 (x86_64)"
+::1 - - [28/Mar/2017:20:51:59 -0400] "GET /randompac.pac HTTP/1.1" 200 2329 "-" "networkd (unknown version) CFNetwork/760.6.3 Darwin/15.6.0 (x86_64)"
+::ffff:192.168.1.8 - - [28/Mar/2017:20:57:22 -0400] "GET /mike.pac HTTP/1.1" 200 2329 "-" "mdmd/1.0 CFNetwork/808.3 Darwin/16.3.0"
+::ffff:192.168.1.8 - - [28/Mar/2017:20:57:28 -0400] "GET /mike.pac HTTP/1.1" 200 2329 "-" "com.apple.WebKit.Networking/8602.4.6 CFNetwork/808.3 Darwin/16.3.0"
+::ffff:192.168.1.8 - - [28/Mar/2017:20:57:29 -0400] "GET /mike.pac HTTP/1.1" 200 2329 "-" "MobileSafari/602.1 CFNetwork/808.3 Darwin/16.3.0"
+::ffff:192.168.1.8 - - [28/Mar/2017:20:57:29 -0400] "GET /mike.pac HTTP/1.1" 200 2329 "-" "nsurlsessiond/808.3 CFNetwork/808.3 Darwin/16.3.0"
+::ffff:192.168.1.8 - - [28/Mar/2017:20:57:30 -0400] "GET /mike.pac HTTP/1.1" 200 2329 "-" "syncdefaultsd (unknown version) CFNetwork/808.3 Darwin/16.3.0"
+::ffff:192.168.1.8 - - [28/Mar/2017:20:57:30 -0400] "GET /mike.pac HTTP/1.1" 200 2329 "-" "com.apple.WebKit.Networking/8602.4.6 CFNetwork/808.3 Darwin/16.3.0"
+::ffff:192.168.1.8 - - [28/Mar/2017:20:57:42 -0400] "GET /mike.pac HTTP/1.1" 200 2329 "-" "cloudd/643.5 CFNetwork/808.3 Darwin/16.3.0"
+::ffff:192.168.1.8 - - [28/Mar/2017:20:58:22 -0400] "GET /mike.pac HTTP/1.1" 200 2329 "-" "mdmd/1.0 CFNetwork/808.3 Darwin/16.3.0"

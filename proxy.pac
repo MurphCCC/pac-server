@@ -1,0 +1,46 @@
+function FindProxyForURL(t,r){
+if(shExpMatch(t,"*.emltrk.com*"))return"PROXY 8.8.8.8:53";
+if(shExpMatch(t,"*.exelator.com*"))return"PROXY 8.8.8.8:53";
+if(shExpMatch(t,"*cacerts.digicert.com*"))return"DIRECT";
+if(shExpMatch(t,"*ol24.tvfcu.com*"))return"DIRECT";
+if(shExpMatch(t,"*pornhub*"))return"PROXY 8.8.8.8:53";
+if(shExpMatch(t,"http://juicygif.com*"))return"PROXY 8.8.8.8:53";
+if(shExpMatch(t,"*tvfcu.com*"))return"DIRECT";
+if(shExpMatch(t,"*regions.com*"))return"DIRECT";
+if(shExpMatch(t,"*regions.com*"))return"DIRECT";
+if(shExpMatch(t,"*plex.direct*"))return"DIRECT";
+if(shExpMatch(t,"*audio-ec.scdn.co*"))return"DIRECT";
+if(shExpMatch(t,"*.scdn.co*"))return"DIRECT";
+if(shExpMatch(t,"*audio-ak.spotify.com.edgesuite.net*"))return"DIRECT";
+if(shExpMatch(t,"*mlb.com*"))return"DIRECT";
+if(shExpMatch(t,"*usaa.com*"))return"DIRECT";
+if(shExpMatch(t,"*capitalone.com*"))return"DIRECT";
+if(shExpMatch(t,"*suntrust.com*"))return"DIRECT";
+if(shExpMatch(t,"*mobile.bankofamerica.com*"))return"DIRECT";
+if(shExpMatch(t,"*foxnews.com*"))return"DIRECT";
+if(shExpMatch(t,"*.fncstatic.com*"))return"DIRECT";
+if(shExpMatch(t,"*youversion*.*"))return"DIRECT";
+if(shExpMatch(t,"*.mzstatic.com*"))return"DIRECT";
+if(shExpMatch(t,"*.icloud.com*"))return"DIRECT";
+if(shExpMatch(t,"*.apple.com*"))return"DIRECT";
+if(shExpMatch(t,"*origin.guzzoni-apple.com.akadns.net*"))return"DIRECT";
+if(shExpMatch(t,"*api.smoot.apple.com*"))return"DIRECT";
+if(shExpMatch(t,"*.google.com*"))return"DIRECT";
+if(shExpMatch(t,"*.clients*.google.com*"))return"DIRECT";
+if(shExpMatch(t,"*.*netflix.com*"))return"DIRECT";
+if(shExpMatch(t,"*.nflxext.com*"))return"DIRECT";
+if(shExpMatch(t,"*.nflximg.net*"))return"DIRECT";
+if(shExpMatch(t,"*.nflximg.com*"))return"DIRECT";
+if(shExpMatch(t,"*.nflxvideo.net*"))return"DIRECT";
+if(shExpMatch(t,"*.spotify.com*"))return"DIRECT";
+if(shExpMatch(t,"*audio-ak.spotify.com.edgesuite.net*"))return"DIRECT";
+if(shExpMatch(t,"*.pandora.com*"))return"DIRECT";
+if(shExpMatch(t,"*.media-imdb.com*"))return"DIRECT";
+if(shExpMatch(t,"*atv-ext.amazon.com*"))return"DIRECT";
+if(shExpMatch(t,"*shazamid.com*"))return"DIRECT";
+if(shExpMatch(t,"*shazam.com*"))return"DIRECT";
+if(shExpMatch(t,"*lumosity.com*"))return"DIRECT";
+if(shExpMatch(t,"*66.18.34.50*"))return"DIRECT";
+return "PROXY smwall.mdm.calvarychatt.com:800; DIRECT";
+
+}
