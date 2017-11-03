@@ -1,29 +1,45 @@
-var express = require('express')
-var app = express()
-var fs = require('fs')
-var accesslog = require('access-log');
-var https = require('https');
-var http = require('http');
-
-var options = {
-   key  : fs.readFileSync('privkey1.pem'),
-   cert : fs.readFileSync('cert1.pem')
+const https = require('https');
+const fs = require('fs');
+const express = require('express');
+const app = express();
+const accesslog = require('access-log');
+const shell = require('shelljs');
+const exec = require('child_process').exec;
+const path = require('path');
+// Set up express server here
+const options = {
+    cert: fs.readFileSync(path.join(__dirname,'./fullchain.pem')),
+    key: fs.readFileSync(path.join(__dirname, './privkey.pem'))
 };
 
-//Wildcard route.  Because this server is only handling pac files we want to serve proxy.pac to all requests.
-app.get('*', function (req, res) {
-  accesslog(req, res);
-  res.redirect('https://localhost:8443');
-  var data = fs.readFileSync('proxy.pac').toString();
-  // res.send(data)
+app.get('/log', (req, res) => {
+  exec("awk '{print $1, $7}' /var/log/apache2/pacserver-*.log | sort | uniq | sed 's=/==g' | sed 's=.pac==g'", (e, stdout, stderr)=> {
+      if (e instanceof Error) {
+          console.error(e);
+          throw e;
+      }
+      console.log('stdout ', stdout);
+      console.log('stderr ', stderr);
+      res.send(stdout)
+  });
+  // res.sendFile(__dirname + '/server.log')
+  res.end
 })
 
-app.listen(80, function () {
-  console.log('Example app listening on port 3000!')
+app.get('/log1', (req, res) => {
+  exec("awk '{print $1, $7}' /var/log/apache2/pacserver-access.log.1 | sort | uniq | sed 's=/==g' | sed 's=.pac==g'", (e, stdout, stderr)=> {
+      if (e instanceof Error) {
+          console.error(e);
+          throw e;
+      }
+      console.log('stdout ', stdout);
+      console.log('stderr ', stderr);
+      res.send(stdout)
+  });
+  // res.sendFile(__dirname + '/server.log')
+  res.end
 })
 
-https.createServer(options, (req, res) => {
-  var data = fs.readFileSync('proxy.pac').toString();
-  res.writeHead(200);
-  res.end(data);
-}).listen(8443);
+app.listen(8080);
+https.createServer(options, app).listen(8443);
+console.log('listening');
